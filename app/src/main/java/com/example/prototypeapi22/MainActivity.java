@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    int hand;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,22 +18,19 @@ public class MainActivity extends AppCompatActivity {
         Button PA_Button = (Button)findViewById(R.id.button3);
         GU_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                TextView textView1 = (TextView)findViewById(R.id.textView);
-                textView1.setText("GU_Button Clicked!!");
+                hand = 1;
             }
         });
 
         TYOKI_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                TextView textView1 = (TextView)findViewById(R.id.textView2);
-                textView1.setText("TYOKI_Button Clicked!!");
+                hand = 2;
             }
         });
 
         PA_Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                TextView textView1 = (TextView)findViewById(R.id.textView3);
-                textView1.setText("PA_Button Clicked!!");
+                hand = 3;
             }
         });
 
