@@ -6,4 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".Game">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageButton
+                android:id="@+id/imageDOG"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/inu" />
+
+            <ImageButton
+                android:id="@+id/imageJU"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/jurenuku" />
+
+            <ImageButton
+                android:id="@+id/imageCAT"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/neko" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ready?"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.182" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="131dp"
+            android:layout_height="68dp"
+            android:text="判定"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="165dp"
+            android:layout_height="78dp"
+            android:text="NewGame?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.647" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
