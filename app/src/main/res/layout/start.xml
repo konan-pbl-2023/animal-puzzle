@@ -73,7 +73,7 @@
             android:id="@+id/button2"
             android:layout_width="165dp"
             android:layout_height="78dp"
-            android:text="NewGame?"
+            android:text="NewGame"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

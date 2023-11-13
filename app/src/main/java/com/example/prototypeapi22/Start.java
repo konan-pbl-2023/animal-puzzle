@@ -41,6 +41,9 @@ public class Start extends AppCompatActivity {
                 String resultText = DecideGame(myhand, anotherhand);
                 TextView textView2 = (TextView)findViewById(R.id.textView4);
                 textView2.setText(resultText);
+
+                Intent intent = new Intent(Start.this,Score.class);
+                startActivity(intent);
             }
         });
         ImageButtonDOG.setOnClickListener(new View.OnClickListener(){
@@ -59,6 +62,9 @@ public class Start extends AppCompatActivity {
                 String resultText = DecideGame(myhand, anotherhand);
                 TextView textView2 = (TextView)findViewById(R.id.textView4);
                 textView2.setText(resultText);
+
+                Intent intent = new Intent(Start.this,Score.class);
+                startActivity(intent);
             }
         });
         ImageButtonJU.setOnClickListener(new View.OnClickListener(){
@@ -77,12 +83,16 @@ public class Start extends AppCompatActivity {
                 String resultText = DecideGame(myhand, anotherhand);
                 TextView textView2 = (TextView)findViewById(R.id.textView4);
                 textView2.setText(resultText);
+
+                Intent intent = new Intent(Start.this,Score.class);
+                startActivity(intent);
             }
         });
+
         Button nextButton = (Button)findViewById(R.id.button2);
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Start.this,MainActivity.class);
+                Intent intent = new Intent(Start.this,Score.class);
                 startActivity(intent);
             }
         });
