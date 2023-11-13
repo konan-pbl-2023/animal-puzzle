@@ -13,7 +13,7 @@ public class Score extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score);
-        Button nextButton = (Button) findViewById(R.id.StartButton);
+        Button nextButton = (Button) findViewById(R.id.RestartButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Score.this, MainActivity.class);
