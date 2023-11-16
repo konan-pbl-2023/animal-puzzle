@@ -3,6 +3,7 @@ package com.example.prototypeapi22;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class Score extends AppCompatActivity {
         int anotherhand1 = intent.getIntExtra("anotherhand", 1);
         int anotherhand2 = intent.getIntExtra("anotherhand",2);
         int anotherhand3 = intent.getIntExtra("anotherhand",3);
+        String resultText;
 
 
        if(myhand1 == 1){
@@ -51,33 +53,40 @@ public class Score extends AppCompatActivity {
         }
 
         if(myhand1 == 1 && anotherhand1 == 1){
-            String resultText = DecideGame(myhand1, anotherhand1);
+            resultText = DecideGame(myhand1, anotherhand1);
             textView2.setText(resultText);
         }if(myhand1 == 1 && anotherhand2 == 2){
-            String resultText = DecideGame(myhand1, anotherhand2);
+            resultText = DecideGame(myhand1, anotherhand2);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.RED);
         }if(myhand1 == 1 && anotherhand3 == 3){
-            String resultText = DecideGame(myhand1, anotherhand3);
+            resultText = DecideGame(myhand1, anotherhand3);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.BLUE);
         }if(myhand2 == 2 && anotherhand1 == 1){
-            String resultText = DecideGame(myhand2, anotherhand1);
+            resultText = DecideGame(myhand2, anotherhand1);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.BLUE);
         }if(myhand2 == 2 && anotherhand2 == 2){
-            String resultText = DecideGame(myhand2, anotherhand2);
+            resultText = DecideGame(myhand2, anotherhand2);
             textView2.setText(resultText);
         }if(myhand2 == 2 && anotherhand3 == 3){
-            String resultText = DecideGame(myhand2, anotherhand3);
+            resultText = DecideGame(myhand2, anotherhand3);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.RED);
         }if(myhand3 == 3 && anotherhand1 == 1){
-            String resultText = DecideGame(myhand3, anotherhand1);
+            resultText = DecideGame(myhand3, anotherhand1);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.RED);
         }if(myhand3 == 3 && anotherhand2 == 2){
-            String resultText = DecideGame(myhand3, anotherhand2);
+            resultText = DecideGame(myhand3, anotherhand2);
             textView2.setText(resultText);
+            textView2.setTextColor(Color.BLUE);
         }if(myhand3 == 3 && anotherhand3 == 3){
-            String resultText = DecideGame(myhand3, anotherhand3);
+            resultText = DecideGame(myhand3, anotherhand3);
             textView2.setText(resultText);
         }
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Score.this, MainActivity.class);
