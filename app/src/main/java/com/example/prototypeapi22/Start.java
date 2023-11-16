@@ -43,6 +43,8 @@ public class Start extends AppCompatActivity {
                 textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
+                intent.putExtra("myhand", 1);
+                intent.putExtra("anotherhand", anotherhand);
                 startActivity(intent);
             }
         });
@@ -64,6 +66,8 @@ public class Start extends AppCompatActivity {
                 textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
+                intent.putExtra("myhand", 2);
+                intent.putExtra("anotherhand",anotherhand);
                 startActivity(intent);
             }
         });
@@ -85,6 +89,8 @@ public class Start extends AppCompatActivity {
                 textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
+                intent.putExtra("myhand", 3);
+                intent.putExtra("anotherhand", anotherhand);
                 startActivity(intent);
             }
         });
