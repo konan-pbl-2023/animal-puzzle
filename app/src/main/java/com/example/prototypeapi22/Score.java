@@ -92,7 +92,7 @@ public class Score extends AppCompatActivity {
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Score.this, MainActivity.class);
+                Intent intent = new Intent(Score.this, Start.class);
                 startActivity(intent);
             }
         });
