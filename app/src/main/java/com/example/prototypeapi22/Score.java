@@ -97,7 +97,7 @@ public class Score extends AppCompatActivity {
 
     String DecideGame(int myhand, int anotherhand) {
         String decision;
-        if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = "WIN";
+        if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = " WIN";
         else if (myhand == anotherhand) decision = "DRAW";
         else decision = "LOSE";
         return decision;
