@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button nextButton = (Button) findViewById(R.id.RestartButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
+            //スタートボタンを押すとゲーム画面に移動
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Start.class);
                 startActivity(intent);

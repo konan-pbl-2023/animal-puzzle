@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class Start extends AppCompatActivity {
+    //変数の宣言
     int myhand;
     int anotherhand = DecideAnotherhand();
     @Override
@@ -25,6 +26,7 @@ public class Start extends AppCompatActivity {
 
 
 
+        //猫のボタンを押したときの処理
         ImageButtonCAT.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 myhand = 1;
@@ -38,9 +40,6 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-//                String resultText = DecideGame(myhand, anotherhand);
-//                TextView textView2 = (TextView)findViewById(R.id.textView4);
-//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 1);
@@ -48,6 +47,7 @@ public class Start extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //犬のボタンを押したときの処理
         ImageButtonDOG.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 myhand = 2;
@@ -61,9 +61,6 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-//                String resultText = DecideGame(myhand, anotherhand);
-//                TextView textView2 = (TextView)findViewById(R.id.textView4);
-//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 2);
@@ -71,6 +68,7 @@ public class Start extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //ジュレヌクのボタンを押したときの処理
         ImageButtonJU.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 myhand = 3;
@@ -84,9 +82,6 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-//                String resultText = DecideGame(myhand, anotherhand);
-//                TextView textView2 = (TextView)findViewById(R.id.textView4);
-//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 3);
@@ -95,32 +90,13 @@ public class Start extends AppCompatActivity {
             }
         });
 
-        Button nextButton = (Button)findViewById(R.id.button2);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Start.this,Score.class);
-                startActivity(intent);
-            }
-        });
 
     }
+    //ランダムで相手の手を決定
     int DecideAnotherhand() {
         Random rnd = new Random();
         int hand = rnd.nextInt(3)+1;
         return hand;
     }
-    String ChangeTextAnotherhand(int anotherhand) {
-        String handText = "";
-        if (anotherhand == 1) handText = "グー";
-        else if (anotherhand == 2) handText = "チョキ";
-        else if (anotherhand == 3) handText = "パー";
-        return handText;
-    }
-//    String DecideGame(int myhand, int anotherhand) {
-//        String decision;
-//        if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = "WIN";
-//        else if (myhand == anotherhand) decision = "DRAW";
-//        else decision = "LOSE";
-//        return decision;
-//    }
+
 }
