@@ -61,7 +61,7 @@ public class Start extends AppCompatActivity {
         //猫のボタンを押したときの処理
         ImageButtonCAT.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //play_mp3a();
+                play_mp3a();
                 myhand = 1;
                 if(anotherhand == 1) {
                     ImageView ImageViewCAT = (ImageView)findViewById(R.id.imageViewCat);
@@ -104,7 +104,7 @@ public class Start extends AppCompatActivity {
         //犬のボタンを押したときの処理
         ImageButtonDOG.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //play_mp3a();
+                play_mp3a();
                 myhand = 2;
                 if(anotherhand == 1) {
                     ImageView ImageViewCAT = (ImageView)findViewById(R.id.imageViewCat);
@@ -147,7 +147,7 @@ public class Start extends AppCompatActivity {
         //ジュレヌクのボタンを押したときの処理
         ImageButtonJU.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //play_mp3a();
+                play_mp3a();
                 myhand = 3;
                 if(anotherhand == 1) {
                     ImageView ImageViewCAT = (ImageView)findViewById(R.id.imageViewCat);
