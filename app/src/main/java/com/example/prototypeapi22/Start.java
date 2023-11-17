@@ -38,9 +38,9 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-                String resultText = DecideGame(myhand, anotherhand);
-                TextView textView2 = (TextView)findViewById(R.id.textView4);
-                textView2.setText(resultText);
+//                String resultText = DecideGame(myhand, anotherhand);
+//                TextView textView2 = (TextView)findViewById(R.id.textView4);
+//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 1);
@@ -61,9 +61,9 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-                String resultText = DecideGame(myhand, anotherhand);
-                TextView textView2 = (TextView)findViewById(R.id.textView4);
-                textView2.setText(resultText);
+//                String resultText = DecideGame(myhand, anotherhand);
+//                TextView textView2 = (TextView)findViewById(R.id.textView4);
+//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 2);
@@ -84,9 +84,9 @@ public class Start extends AppCompatActivity {
                     ImageView ImageViewJU = (ImageView)findViewById(R.id.imageViewJu);
                     ImageViewJU.setAlpha(1f);
                 }
-                String resultText = DecideGame(myhand, anotherhand);
-                TextView textView2 = (TextView)findViewById(R.id.textView4);
-                textView2.setText(resultText);
+//                String resultText = DecideGame(myhand, anotherhand);
+//                TextView textView2 = (TextView)findViewById(R.id.textView4);
+//                textView2.setText(resultText);
 
                 Intent intent = new Intent(Start.this,Score.class);
                 intent.putExtra("myhand", 3);
@@ -116,11 +116,11 @@ public class Start extends AppCompatActivity {
         else if (anotherhand == 3) handText = "パー";
         return handText;
     }
-    String DecideGame(int myhand, int anotherhand) {
-        String decision;
-        if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = "WIN";
-        else if (myhand == anotherhand) decision = "DRAW";
-        else decision = "LOSE";
-        return decision;
-    }
+//    String DecideGame(int myhand, int anotherhand) {
+//        String decision;
+//        if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = "WIN";
+//        else if (myhand == anotherhand) decision = "DRAW";
+//        else decision = "LOSE";
+//        return decision;
+//    }
 }
