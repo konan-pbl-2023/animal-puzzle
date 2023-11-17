@@ -16,9 +16,6 @@
             android:name=".Score"
             android:exported="false" />
         <activity
-            android:name=".Game"
-            android:exported="false" />
-        <activity
             android:name=".Start"
             android:exported="false" />
         <activity

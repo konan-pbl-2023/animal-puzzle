@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class Score extends AppCompatActivity {
 
+    //変数の宣言
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class Score extends AppCompatActivity {
         String resultText;
 
 
+        //前の画面で押されたボタンと表示された画像の表示
        if(myhand1 == 1){
            ImageButtonCat.setAlpha(1f);
        }
@@ -52,6 +54,7 @@ public class Score extends AppCompatActivity {
             ImageViewJu.setAlpha(1f);
         }
 
+        //各ボタンが押された時の判定の表示
         if(myhand1 == 1 && anotherhand1 == 1){
             resultText = DecideGame(myhand1, anotherhand1);
             textView2.setText(resultText);
@@ -95,6 +98,7 @@ public class Score extends AppCompatActivity {
         });
     }
 
+    //結果の判定
     String DecideGame(int myhand, int anotherhand) {
         String decision;
         if ((myhand == 3 && anotherhand == 1) || (myhand+1 == anotherhand)) decision = " WIN";
