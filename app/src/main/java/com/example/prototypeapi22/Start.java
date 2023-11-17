@@ -2,6 +2,8 @@ package com.example.prototypeapi22;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -41,10 +43,27 @@ public class Start extends AppCompatActivity {
                     ImageViewJU.setAlpha(1f);
                 }
 
-                Intent intent = new Intent(Start.this,Score.class);
-                intent.putExtra("myhand", 1);
-                intent.putExtra("anotherhand", anotherhand);
-                startActivity(intent);
+                //画面を遅らせる
+                Handler handler = new Handler(Looper.getMainLooper());
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(500);
+                                    Intent intent = new Intent(Start.this,Score.class);
+                                    intent.putExtra("myhand", 1);
+                                    intent.putExtra("anotherhand",anotherhand);
+                                    startActivity(intent);
+                                } catch (InterruptedException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        });
+                    }
+                }).start();
             }
         });
         //犬のボタンを押したときの処理
@@ -62,10 +81,27 @@ public class Start extends AppCompatActivity {
                     ImageViewJU.setAlpha(1f);
                 }
 
-                Intent intent = new Intent(Start.this,Score.class);
-                intent.putExtra("myhand", 2);
-                intent.putExtra("anotherhand",anotherhand);
-                startActivity(intent);
+                //画面を遅らせる
+                Handler handler = new Handler(Looper.getMainLooper());
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(500);
+                                    Intent intent = new Intent(Start.this,Score.class);
+                                    intent.putExtra("myhand", 2);
+                                    intent.putExtra("anotherhand",anotherhand);
+                                    startActivity(intent);
+                                } catch (InterruptedException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        });
+                    }
+                }).start();
             }
         });
         //ジュレヌクのボタンを押したときの処理
@@ -83,10 +119,27 @@ public class Start extends AppCompatActivity {
                     ImageViewJU.setAlpha(1f);
                 }
 
-                Intent intent = new Intent(Start.this,Score.class);
-                intent.putExtra("myhand", 3);
-                intent.putExtra("anotherhand", anotherhand);
-                startActivity(intent);
+                //画面を遅らせる
+                Handler handler = new Handler(Looper.getMainLooper());
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Thread.sleep(500);
+                                    Intent intent = new Intent(Start.this,Score.class);
+                                    intent.putExtra("myhand", 3);
+                                    intent.putExtra("anotherhand",anotherhand);
+                                    startActivity(intent);
+                                } catch (InterruptedException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        });
+                    }
+                }).start();
             }
         });
 
